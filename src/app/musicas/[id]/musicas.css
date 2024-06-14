@@ -1,0 +1,145 @@
+/* Estilos Gerais */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #121212; /* Fundo escuro */
+  color: #ffffff; /* Texto branco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contêiner Principal */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Título */
+.title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #1db954; /* Verde do Spotify */
+  letter-spacing: 2px;
+}
+
+/* Contêiner de Cartões */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* Cartão */
+.card {
+  background: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 250px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Conteúdo do Cartão */
+.cardContent {
+  padding: 10px 0;
+}
+
+.cardTitle {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #1db954; /* Verde do Spotify */
+}
+
+.cardDescription {
+  font-size: 1em;
+  color: #cccccc; /* Cinza claro */
+}
+
+/* Botão Voltar */
+.button-back {
+  background-color: #1db954; /* Verde do Spotify */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 20px;
+}
+
+.button-back:hover {
+  background-color: #1ed760; /* Verde mais claro */
+  transform: scale(1.05);
+}
+
+.button-back:active {
+  background-color: #1aa34a; /* Verde mais escuro */
+  transform: scale(0.95);
+}
+
+.button-back:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.4);
+}
+
+/* Botão Favoritar */
+.favorite-button {
+  background-color: transparent; /* Fundo transparente */
+  border: 2px solid #1db954; /* Borda verde do Spotify */
+  color: #1db954; /* Texto verde do Spotify */
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 0 auto;
+}
+
+.favorite-button:hover {
+  background-color: #1db954; /* Fundo verde do Spotify */
+  color: white; /* Texto branco */
+  transform: scale(1.05);
+}
+
+.favorite-button:active {
+  background-color: #1aa34a; /* Fundo verde mais escuro */
+  color: white;
+  transform: scale(0.95);
+}
+
+.favorite-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.4);
+}
+
+/* Barra de pesquisa */
+.searchInput {
+  width: 99%;
+  padding: 10px;
+  margin: 20px 0; /* Adicione uma margem superior e inferior para espaçamento */
+  border: 1px solid #1db954;
+  border-radius: 5px;
+  color: #121212;
+  font-size: 1em;
+}

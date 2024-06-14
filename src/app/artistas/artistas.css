@@ -1,0 +1,146 @@
+/* src/app/artistas/artistas.css */
+
+/* Estilos Gerais */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #121212; /* Fundo escuro */
+  color: #ffffff; /* Texto branco */
+  height: 100vh;
+  overflow: hidden; /* Impede a rolagem do corpo */
+}
+
+/* Contêiner Principal */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Contêiner de Conteúdo */
+.contentContainer {
+  flex: 1;
+  overflow-y: auto; /* Permite a rolagem do conteúdo */
+  padding: 20px;
+}
+
+/* Estilos do Header */
+header {
+  background-color: #1db954; /* Verde do Spotify */
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header .headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para o Título */
+.title {
+  font-size: 2.5em;
+  margin: 80px 0 20px; /* Espaço para o Header fixo */
+  color: #1db954; /* Verde do Spotify */
+  letter-spacing: 2px;
+}
+
+/* Contêiner de Cartões */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Cartão */
+.card {
+  background: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 280px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Imagem do Cartão */
+.cardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Conteúdo do Cartão */
+.cardContent {
+  padding: 20px;
+}
+
+.cardTitle {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #1db954; /* Verde do Spotify */
+}
+
+.cardDescription {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #cccccc; /* Cinza claro */
+}
+
+/* Botão Ver Músicas */
+.button {
+  display: inline-block;
+  background-color: #1db954; /* Verde do Spotify */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #1ed760; /* Verde mais claro */
+  transform: scale(1.05);
+}
+
+.button:active {
+  background-color: #1aa34a; /* Verde mais escuro */
+  transform: scale(0.95);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.4);
+}
+
+/* Barra de pesquisa */
+.searchInput {
+  width: 99%;
+  padding: 10px;
+  margin: 20px 0; /* Adicione uma margem superior e inferior para espaçamento */
+  border: 1px solid #1db954;
+  border-radius: 5px;
+  color: #121212;
+  font-size: 1em;
+}
