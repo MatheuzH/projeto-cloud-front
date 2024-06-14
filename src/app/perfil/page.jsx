@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import Header from "../components/Header";
-import "./perfil.css";
+import "./perfil.css"
+
 
 const Perfil = () => {
   const [user, setUser] = useState(null);

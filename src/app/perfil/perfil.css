@@ -1,0 +1,87 @@
+/* src/app/perfil/perfil.css */
+
+/* Estilos Gerais */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #121212; /* Fundo escuro */
+  color: #ffffff; /* Texto branco */
+  height: 100vh;
+  overflow: hidden; /* Impede a rolagem do corpo */
+}
+
+/* Contêiner Principal */
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px; /* Espaço para o cabeçalho */
+}
+
+/* Contêiner de Conteúdo */
+.profileContent {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Estilos do Card de Perfil */
+.profileCardContainer {
+  background-color: #1e1e1e; /* Fundo escuro para o card */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.profileTitle {
+  font-size: 2em;
+  color: #1db954; /* Verde do Spotify */
+  margin-bottom: 20px;
+}
+
+.profileCardText {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.profileCardSubtitle {
+  font-size: 1.5em;
+  color: #1db954; /* Verde do Spotify */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.profileButton {
+  display: inline-block;
+  background-color: #1db954; /* Verde do Spotify */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profileButton:hover {
+  background-color: #1ed760; /* Verde mais claro */
+  transform: scale(1.05);
+}
+
+.profileButton:active {
+  background-color: #1aa34a; /* Verde mais escuro */
+  transform: scale(0.95);
+}
+
+.profileButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.4);
+}
+
