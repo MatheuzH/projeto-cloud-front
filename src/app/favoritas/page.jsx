@@ -19,7 +19,7 @@
             return;
           }
 
-          const response = await axios.get("http://localhost:8080/usuario/me", {
+          const response = await axios.get("https://spotify-2.azurewebsites.net/usuario/me", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -44,7 +44,7 @@
         const token = localStorage.getItem("token");
         if (token && user && user.id) {
           await axios.post(
-            `http://localhost:8080/usuario/${user.id}/desfavoritar/${musicaId}`,
+            `https://spotify-2.azurewebsites.net/usuario/${user.id}/desfavoritar/${musicaId}`,
             {},
             { headers: { Authorization: `Bearer ${token}` } }
           );

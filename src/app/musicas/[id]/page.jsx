@@ -16,7 +16,7 @@ export default function Musicas() {
     const fetchMusicas = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/banda/${params.id}/musicas`
+          `https://spotify-2.azurewebsites.net/banda/${params.id}/musicas`
         );
         setMusicas(response.data);
         setFilteredMusicas(response.data); // Inicializa as músicas filtradas
@@ -30,7 +30,7 @@ export default function Musicas() {
         const token = localStorage.getItem("token");
         if (token) {
           const userResponse = await axios.get(
-            "http://localhost:8080/usuario/me",
+            "https://spotify-2.azurewebsites.net/usuario/me",
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -51,7 +51,7 @@ export default function Musicas() {
       const token = localStorage.getItem("token");
       if (token && userId) {
         await axios.post(
-          `http://localhost:8080/usuario/${userId}/favoritar/${musicaId}`,
+          `https://spotify-2.azurewebsites.net/usuario/${userId}/favoritar/${musicaId}`,
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );

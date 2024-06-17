@@ -20,7 +20,7 @@ const Perfil = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:8080/usuario/me", {
+        const response = await axios.get("https://spotify-2.azurewebsites.net/usuario/me", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

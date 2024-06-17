@@ -15,7 +15,7 @@ export default function Cadastrar() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:8080/usuario`, {
+      const response = await axios.post(`https://spotify-2.azurewebsites.net/usuario`, {
         nome,
         email,
         senha,

@@ -14,7 +14,7 @@ const Planos = () => {
   useEffect(() => {
     const fetchPlanos = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/plano");
+        const response = await axios.get("https://spotify-2.azurewebsites.net/plano");
         setPlanos(response.data);
       } catch (error) {
         console.error("Erro ao buscar planos:", error);
@@ -29,7 +29,7 @@ const Planos = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:8080/usuario/me", {
+        const response = await axios.get("https://spotify-2.azurewebsites.net/usuario/me", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -69,7 +69,7 @@ const Planos = () => {
 
       // Faz a requisição para trocar a assinatura do usuário
       await axios.post(
-        `http://localhost:8080/usuario/${user.id}/TrocarAssinatura/${idAssinatura}/${planoId}`,
+        `https://spotify-2.azurewebsites.net/usuario/${user.id}/TrocarAssinatura/${idAssinatura}/${planoId}`,
         null,
         {
           headers: {
