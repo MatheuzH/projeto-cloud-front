@@ -21,8 +21,8 @@ const Home = () => {
     <div className="home-container">
       <h1 className="home-title">Seja bem-vindo ao Spotify2</h1>
       <div className="button-group">
-        <a href="cadastro" className="home-button">Sign-up</a>
-        <a href="login" className="home-button">Sign-in</a>
+        <a href="cadastro" className="home-button">Cadastre-se</a>
+        <a href="login" className="home-button">Login</a>
         {/* Botão que verifica se o token existe antes de redirecionar para /artistas */}
         <a href="artistas" className="home-button" onClick={handleVerArtistas}>Veja nossos artistas</a>
       </div>
