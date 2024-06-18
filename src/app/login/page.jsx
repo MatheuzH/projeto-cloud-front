@@ -14,15 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://spotify-2.azurewebsites.net/usuario/login", 
-        { email, senha },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer e0a1328a-bc11-4606-8751-b677045b1568`, // Inclui a chave de API
-          },
-        }
-      );
+      const response = await axios.post("https://spotify-2.azurewebsites.net/usuario/login", { email, senha },);
       localStorage.setItem("token", response.data.token); // Armazena o token no localStorage
       router.push("/artistas"); // Redireciona para /artistas após o login
     } catch (error) {
