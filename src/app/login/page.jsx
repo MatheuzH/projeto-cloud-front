@@ -14,7 +14,14 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://spotify-2.azurewebsites.net/usuario/login", { email, senha },);
+      const response = await axios.post("https://spotify-2.azurewebsites.net/usuario/login", 
+        { email, senha },
+      {
+          headers: {
+          "Ocp-Apim-Subscription-Key": process.env.NEXT_PUBLIC_API_KEY,
+        },
+      }
+      );
       localStorage.setItem("token", response.data.token); // Armazena o token no localStorage
       router.push("/artistas"); // Redireciona para /artistas após o login
     } catch (error) {
