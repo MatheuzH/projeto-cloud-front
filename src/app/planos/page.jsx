@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "../components/Header";
-import "./Planos.css"; // Importando o arquivo de estilos CSS
+import "./planos.css"; // Importando o arquivo de estilos CSS
 
 const Planos = () => {
   const [planos, setPlanos] = useState([]);
