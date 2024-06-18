@@ -18,7 +18,7 @@ const Login = () => {
         { email, senha },
       {
           headers: {
-          "Ocp-Apim-Subscription-Key": process.env.NEXT_PUBLIC_API_KEY,
+          "Ocp-Apim-Subscription-Key": "e0a1328a-bc11-4606-8751-b677045b1568",
         },
       }
       );
