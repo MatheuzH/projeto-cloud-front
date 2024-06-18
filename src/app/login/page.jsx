@@ -19,7 +19,7 @@ const Login = () => {
         {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`, // Inclui a chave de API
+            'Authorization': `Bearer e0a1328a-bc11-4606-8751-b677045b1568`, // Inclui a chave de API
           },
         }
       );
